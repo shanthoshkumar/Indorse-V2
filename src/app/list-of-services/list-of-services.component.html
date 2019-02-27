@@ -1,0 +1,69 @@
+<script defer src="/static/fontawesome/fontawesome-all.js"></script>
+<script src="../bootstrap.min.css"></script>
+<script src="../bootstrap.min.js"></script>
+<div class="container">
+  <div class="col-sm-2"></div>
+  <div class="col-sm-12" >     
+      <div class="col-sm-12">
+    <h4 style="text-align: center"><i style="color:blue">Basket 1:For Native Tokens Holders </i></h4>
+    <h4 style="text-align: center"><i style="color:green">Basket 2:For who Needs To Become a Native Tokens Holder</i></h4>
+
+          <h2  style="color: tomato" style="text-align: center;color: tomato" >Purchase Services<p class="glyphicon glyphicon-shopping-cart"></p></h2>
+          <div style="height:300px;overflow:auto;">
+
+          <table class="table"  >
+              <thead>
+                <tr>
+                  <th>Service Id</th>
+                  <th>Service Name</th>
+                  <th>Service Price(in Native tokens)</th>
+                  <th style="text-align: center">Payment Type</th>
+
+                   </tr>
+              </thead>
+              <tbody id="user_bet_list">
+                 <tr *ngFor="let service of services">
+                     <td>{{ service.id }}</td>
+                     <td>{{ service.name }}</td>
+                     <td>{{ service.price }}</td>
+                     <td><button  class="btn btn-primary"  (click)="Basket_1(service.id)">Basket 1</button>&nbsp;
+                     <button  class="btn btn-success"  (click)="Basket_2(service.id)">Basket 2</button></td>                    
+                  </tr>
+              </tbody>
+            </table>
+          </div>
+
+      
+      </div>
+    <br>
+      
+
+      <div class="col-sm-12" style="height:300px;"> 
+          <h2 style="text-align: center;color:brown">Your Services Are Listed Down Here</h2>
+          <div style="height:350px;overflow:auto;">
+          <table class="table">
+              <thead>
+                <tr style="background:white">
+                  <th>Service Id</th>
+                  <th>Service Name</th>
+                  <th>Service Price(in Native tokens)</th>
+                  <th style="text-align:center">Purchased Time</th>
+
+                   </tr>
+              </thead>
+              <tbody id="user_bet_list">
+                 <tr *ngFor="let data of details">
+                     <td>{{ data.id}}</td>
+                     <td>{{ data.name }}</td>
+                     <td>{{ data.price }}</td>
+                     <td>{{ data.time }}</td>
+                  </tr>
+              </tbody>
+            </table>
+            </div>
+         </div> 
+
+  </div>
+  <ngx-spinner></ngx-spinner>
+ 
+</div>  

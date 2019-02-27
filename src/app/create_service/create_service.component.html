@@ -1,0 +1,100 @@
+   
+  <script src="../bootstrap.min.css"></script>
+  <script src="../bootstrap.min.js"></script>
+   <div>
+   <div class="col-sm-3">
+
+   <div id="input">    
+    <h2 style="color:orange">Create New Service<p class="glyphicon glyphicon-shopping-cart"></p></h2> 
+
+    <div class="form-group">
+       <input class="form-control"  #name id="n" formControlName="name"  [(ngModel)]="servicename" type="text" placeholder="Enter the Service Name">
+    </div>
+   <div class="form-group">
+       <input class="form-control"  #price id="p" formControlName="address" [(ngModel)]="serviceprice" type="text" placeholder="Enter the  value in (Native) tokens "> 
+    </div>
+    <button type="submit" #b1 class="btn btn-primary" (click)="create(name.value,price.value)">Create</button>
+    </div>
+   
+      
+  <div class="col-sm-12">
+    
+   </div>
+
+   <div class="col-sm-12"> 
+      
+      </div> 
+   </div>
+
+   <div class="col-sm-6">     
+ 
+    <div class="col-sm-10">
+      <h2 style="text-align:center">Contract Balance in Ether<img src="assets\if_ETH_1175230.png" style="height:35px"></h2> 
+      <div>
+       <h3 style="text-align:center;color:red">{{token_balance}}</h3>
+      </div><br>
+  
+     
+   </div>
+         
+ 
+   </div>
+   <div class="col-sm-3">
+      <h2 style="color:dodgerblue">Withdraw Your Amount <p class="	glyphicon glyphicon-hand-down"></p></h2> 
+      <div>
+        <div>
+            <input type="text" class="form-control" #amount id="with_amt" [(ngModel)]="withdrawamt" [value]="withdrawamt" formControlName="withdrawamt" placeholder="Enter amount in ether">
+          </div><br>
+      
+         <button  class="btn btn-info" id='b1' (click)="withdraw(amount.value)">Withdraw</button>
+       </div>
+       <div><br>
+        <p id='p1' style="color:red"></p>
+        <p id='p2' style="color:green"></p>
+       </div>
+   </div>
+   <ngx-spinner></ngx-spinner>
+  
+ </div>  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- <form [formGroup]="angForm" novalidate>
+
+ <div class="form-group">
+    <input class="form-control" formControlName="name" type="text" placeholder="Enter the Service Name" #name>
+ </div>
+<div class="form-group">
+    <input class="form-control" formControlName="address" type="text" placeholder="Enter the  value in (IND) tokens " #price> 
+ </div>
+ <button type="submit"
+   [disabled]="angForm.pristine || angForm.invalid" #b2 class="btn btn-primary" (click)="create(name.value,price.value)">Register
+ </button>
+ </form> -->
+
+ 
+ 

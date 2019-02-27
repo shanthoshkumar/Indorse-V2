@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="../bootstrap.min.css"></script>
+  <script src="../bootstrap.min.js"></script>
+</head>
+<style>
+</style>
+<body>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand"><b>Native</b></a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a routerLink="/purchase" id>PURCHASE TOKENS</a></li>
+      <li><a routerLink="/service" id>BUY SERVICES</a></li>
+      <li><a routerLink="/admin" id>ADD NEW SERVICES</a></li>
+      <li><a (click)="sign_out()">Sign Out&nbsp;&nbsp;<span class="glyphicon glyphicon-arrow-right"></span></a></li>
+
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a><input type="label" class="form-control" id="lbl_tkn" readonly></a></li>
+      <li><a><input type="label" class="form-control "  id="lbl_eth" readonly></a></li>
+    </ul>
+  </div>
+</nav>
+
+</body>
+</html>

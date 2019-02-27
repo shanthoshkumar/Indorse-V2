@@ -1,0 +1,62 @@
+<script defer src="/static/fontawesome/fontawesome-all.js"></script>
+<script src="../bootstrap.min.css"></script>
+<script src="../bootstrap.min.js"></script>
+<div class="container">
+
+  <div class="col-sm-4"></div>
+  <div class="col-sm-5">     
+
+      <div class="col-sm-12">
+        <div>
+        <h1 style="color:orange">Purchase Tokens Here<p class="	glyphicon glyphicon-hand-down"></p></h1>
+      </div>
+
+          <br>
+          <h2>Equivalent Ether Value<img src="assets\if_ETH_1175230.png" style="height:35px"></h2>
+          <form>
+            <div class="form-group">
+              <label for="email" style="color:orangered">Ether</label>&nbsp;<p class="glyphicon glyphicon-transfer"></p>
+              <input class="form-control" id='ether' style="color:green" readonly>
+            </div>
+          </form> 
+      </div>
+    
+      
+         
+      <div class="col-sm-12">
+          <h2>Equivalent USD Dollar<p class="glyphicon glyphicon-usd"></p></h2> 
+          <form>
+            <div class="form-group">
+              <label for="email" style="color:brown">Dollar</label>&nbsp;<p class="glyphicon glyphicon-transfer"></p>
+              <input type="email" class="form-control" id="dollar" style="color:rgb(19, 0, 128)" readonly>
+            </div>
+    
+          </form> 
+      </div>
+
+      <div class="col-sm-12"> 
+          <h2>Get Native Tokens </h2>
+            <div class="form-group">
+              <label for="tkn">Tokens:</label>
+              <input type="text" id = "t1" class="form-control" #token placeholder="Enter no of tokens" (input)="set(token.value)">
+            </div>
+            <div class="form-group form-check">
+              <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" id="verify"> Confirm
+              </label>
+            </div>
+            <div #d1>
+            <button  class="btn btn-success" #b1 (click)="Purchase(token.value)">Buy</button>
+          </div>
+          <div>
+            <br>
+            <h4><p id='p1' style="color:red"></p></h4>
+            <h4><p id='p2' style="color:green"></p></h4>
+          </div>
+         </div> 
+
+  </div>
+  <ngx-spinner></ngx-spinner>
+ 
+</div>  
+
